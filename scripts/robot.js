@@ -10,6 +10,7 @@
 const exercise1 = require("../exercises/exercise1");
 const exercise2 = require("../exercises/exercise2");
 const exercise3 = require("../exercises/exercise3");
+const lab = require("../exercises/lab");
 
 const paramExp = /#\{\s*.*?\s*\}/ig
 const paramMatch = /#\{\s*(.*?)\s*\}/ig
@@ -118,5 +119,9 @@ module.exports = (robot) => {
 
   if (exercise3.ACTIVATE_BOT) {
     processExerciseObject(robot, exercise3.botScripts)
+  }
+
+  if (lab.ACTIVATE_BOT) {
+    processExerciseObject(robot, lab.botScripts)
   }
 }
